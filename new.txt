@@ -1,3 +1,5 @@
 hi
 sad
 asd
+
+this is new line - understanding merge conflicts
