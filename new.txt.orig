@@ -1,0 +1,9 @@
+hi
+sad
+asd
+
+<<<<<<< HEAD
+this is new line - understanding merge conflicts
+=======
+this is change done by dev 2
+>>>>>>> c88456d (dev2 changes)

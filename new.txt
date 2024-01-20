@@ -4,3 +4,7 @@ asd
 
 this is new line - understanding merge conflicts
 this is change done by dev2
+
+this is change done by dev2
+this is change done by dev2
+this is change done by dev2
