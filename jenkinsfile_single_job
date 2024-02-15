@@ -22,7 +22,7 @@ pipeline {
           print ("preparing war package to copy to the deploy server")
           dir ("/home/ubuntu/build_server/workspace/single-job_pipeline/target/") {
 
-          stash( includes: "hello-world-webapp.war", name: "package-maven")
+           stash( includes: "hello-world-webapp.war", name: "package-maven")
           }
         }
       }
@@ -37,8 +37,8 @@ pipeline {
 
           //unstash the maven package
           print ("setting the directory to webapps")
-           dir ("home/ubuntu/tomcat/webapps") {
-            print ("getting  the package farom the build_server")
+          dir ("home/ubuntu/tomcat/webapps") {
+             print ("getting  the package farom the build_server")
             unstash (name: "package-maven")
          }
        }
