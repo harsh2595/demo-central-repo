@@ -20,7 +20,10 @@ pipeline {
 
           // stash the war package
           print ("preparing war package to copy to the deploy server")
-          stash( includes: "target/hello-world-webapp.war", name: "package-maven")
+          dir ("/home/ubuntu/build_server/workspace/single-job_pipeline/target/") {
+
+          stash( includes: "hello-world-webapp.war", name: "package-maven")
+          }
         }
       }
     }
