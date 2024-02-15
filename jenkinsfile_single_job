@@ -30,7 +30,7 @@ pipeline {
         node ("deploy_server") {
           //delete the old maven package
           print ("deleting the old maven package")
-          sh "rm -rf //home/ubuntu/tomcat/webapps/hello-world-webapp.war"
+          sh "rm -rf /home/ubuntu/tomcat/webapps/hello-world-webapp.war"
 
           //unstash the maven package
           print ("setting the directory to webapps")
