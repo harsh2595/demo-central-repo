@@ -1,5 +1,5 @@
 pipeline {
-    agent {label "build_server"} #asdas
+    agent {label "build_server"} 
     
     stages {
         stage ("this stage will build the package") {
