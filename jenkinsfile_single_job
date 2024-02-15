@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+
+  stages {
+    stage ("Build the maven war package") {
+      steps {
+       #delete and create a new war package
+      print ("Deleting the old maven package")
+      print ("creating new maven package")
+      sh "mvn clean install"
+     
+
+      }
+    }
+  }
+}
