@@ -33,10 +33,10 @@ pipeline {
           sh "rm -rf //home/ubuntu/tomcat/webapps/hello-world-webapp.war"
 
           //unstash the maven package
-          print ("setting the directory to webapps"
-          dir ("home/ubuntu/tomcat/webapps") {
+          print ("setting the directory to webapps")
+          dir("home/ubuntu/tomcat/webapps") {
             print ("getting  the package from the build_server")
-            unstash (name: "package-maven")
+            unstash( name: "package-maven")
          }
        }
      }
