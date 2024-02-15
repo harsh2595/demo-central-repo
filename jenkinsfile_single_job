@@ -20,7 +20,7 @@ pipeline {
 
           // stash the war package
           print ("preparing war package to copy to the deploy server")
-          stash( includes: target/hello-world-webapp.war", name: "package-maven")
+          stash( includes: "target/hello-world-webapp.war", name: "package-maven")
         }
       }
     }
