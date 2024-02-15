@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-    stage ("Build the maven war package") {
+    stage ("Build the maven wars package") {
       steps {
         node ("build_server") {
 
