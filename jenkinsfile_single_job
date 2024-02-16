@@ -19,7 +19,7 @@ pipeline {
           sh "mvn clean install"
 
           // stash the war package
-          print ("preparing war package to copy to the deploy server") {
+          print ("prepariang war package to copy to the deploy server") {
            stash( includes: "/home/ubuntu/build_server/workspace/single-job_pipeline/target/hello-world-webapp.war", name: "package-maven")
           }
         }
