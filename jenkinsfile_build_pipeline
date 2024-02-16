@@ -2,7 +2,7 @@ def s3_source = "/home/ubuntu/build_server/workspace/build_pipeline/target/hello
 pipeline {
   agent { label "build_server"}
   stages{
-    stage ("build the mavena package") {
+    stage ("build the maven package") {
       steps {
 
           //delete the old package
