@@ -1,0 +1,25 @@
+def s3_source = "/home/ubuntu/build_server/workspace/build_pipeline/target/hello-world-webapp.war"  
+pipeline {
+  agent { label "build_server"}
+  stages{
+    stage ("build the maven package") {
+      steps {
+
+          //delete the old package
+          print ("deleting the old maven package")
+          // build new maven package
+          print ("build new maven package")
+          sh "mvn clean install"
+       }
+     }
+
+     stage ("copy the maven package to s3 bucket") {
+       steps {
+         //copy the package to s3 bucket
+         print ("copying the new maven package to the s3 bucket")
+         sh "aws s3 cp ${s3_source} s3://harsh-package"
+
+        }
+      }
+   }
+}
