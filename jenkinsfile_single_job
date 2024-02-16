@@ -22,7 +22,7 @@ pipeline {
         //  print ("prepariang war package to copy to the deploy server") 
         //  dir("/home/ubuntu/build_server/workspace/single-job_pipeline/target/") {
         //   stash( includes: "hello-world-webapp.war", name: "packagee-maven")
-          }
+        // }
         }
       }
     }
