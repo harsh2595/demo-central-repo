@@ -11,7 +11,7 @@ pipeline {
         sh "rm -rf /home/ubuntu/tomcat/webapps/hello-world-webapp.war"
       }
    }
-    stage ("download the maven package from s3 bucket") {
+    stage ("download the maven packsage from s3 bucket") {
       steps {
         //download and copy maven package
         print ("downloading the maven package from s3 bucket")
