@@ -7,7 +7,7 @@ pipeline {
 
           //delete the old package
           print ("deleting the old maven package")
-          // build new maven package
+          // build a new maven package
           print ("build new maven package")
           sh "mvn clean install"
        }
