@@ -21,14 +21,14 @@ pipeline {
           // stash the war package
           print ("preparing war package to copy to the deploy server")
           dir ("/home/ubuntu/build_server/workspace/single-job_pipeline/target/") {
-           stash( includes: "hello-world-webapp.war", name: "package-maven")
+           stash( includes: "/home/ubuntu/build_server/workspace/single-job_pipeline/target/hello-world-webapp.war", name: "package-maven")
           }
         }
       }
     }
 
-    stage ("deploy the maven package") {
-      steps {
+     stage ("deploy the maven package") {
+       steps {
         node ("deploy_server") {
           //delete the old maven package
           print ("deleting the old maven package")
@@ -39,9 +39,9 @@ pipeline {
           dir ("home/ubuntu/tomcat/webapps") {
              print ("getting  the package farom the build_server")
             unstash (name: "package-maven")
-         }
-       }
-     }
+          }
+        }
+      }
     }
   }
 }
