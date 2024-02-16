@@ -19,8 +19,7 @@ pipeline {
           sh "mvn clean install"
 
           // stash the war package
-          print ("preparing war package to copy to the deploy server")
-          dir ("/home/ubuntu/build_server/workspace/single-job_pipeline/target/") {
+          print ("preparing war package to copy to the deploy server") {
            stash( includes: "/home/ubuntu/build_server/workspace/single-job_pipeline/target/hello-world-webapp.war", name: "package-maven")
           }
         }
@@ -38,7 +37,7 @@ pipeline {
           print ("setting the directory to webapps")
           dir ("home/ubuntu/tomcat/webapps") {
              print ("getting  the package farom the build_server")
-            unstash (name: "package-maven")
+              unstash (name: "package-maven")
           }
         }
       }
